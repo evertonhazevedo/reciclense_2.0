@@ -1,4 +1,4 @@
-# Reciclense.0
+# Reciclense 2.0
 Projeto da cadeira PROJETOS IV
 
 Este projeto de faculdade que será desenvolvido por nossa equipe da cadeira de Projetos 4, 
