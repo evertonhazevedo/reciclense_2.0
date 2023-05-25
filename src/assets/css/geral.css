@@ -1,0 +1,154 @@
+/*Variáveis*/
+:root {
+  --corPadrao: #85B027;
+  --corPadrao2: #556D1F;
+  --corBotao: #54AE29;
+  --corTexto1: #85B027;
+  --corTexto3: #00A8E6;
+  --corHeading: #85B027;
+  --fontePadrao: 'Roboto', sans-serif; 
+
+}
+
+/*Estilo Geral*/
+
+body {
+  font-family: var(--fontePadrao);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.row {
+  margin: 0;
+}
+
+.container {
+  padding: 70px 0;
+}
+
+h1 {
+  color: var(--corHeading);
+
+}
+
+.btn-primary {
+  background-color: var(--corBotao);
+  --bs-btn-hover-bg: var(--corBotao);
+  --bs-btn-active-bg: var(--corBotao);
+  border-color:var(--corBotao) ;
+  --bs-btn-hover-border-color:var(--corBotao);
+}
+
+/* Botão Whatsapp*/
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 65px;
+  right: 30px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 36px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #25D366
+  ;
+}
+
+.btn-whatsapp:hover {
+  bottom: 80px;
+  color: #ffffff;
+  transition-duration: 0.5s;
+}
+
+/* Rodapé */
+
+.rodape {
+  background-color: #d9d9d9;
+  height: 60px;
+  width: 100%;
+  margin-top: 50px;
+
+}
+
+.headings {
+  color: var(--corPadrao);
+  text-align: center;
+  font-family: var(--fontePadrao);
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.btnTxt {
+  margin: 20px;
+  color: black;
+  font-size: 1em;
+}
+
+.headerInput {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Perfil */
+div#perfil {
+  margin-left: 30px;
+  
+}
+
+div#perfil .dropdown-toggle{
+  color: var(--corBotao);
+}
+
+div#perfil .dropdown-item:focus{
+  background-color: var(--corBotao);
+  color: #ffffff;
+}
+
+div#perfil .dropdown-item:hover{
+  background-color: var(--corBotao);
+  color: #ffffff;
+}
+
+.campo-erro{
+  margin-top: 20px;
+}
+
+#preloader, #preloaderCNPJ{
+  margin-top: 25px;
+  display: none;
+}
+
+#preloaderColetor{
+  margin-top: 65px;
+  display: none;
+}
+
+#preloaderCEP{
+  margin-top: 26px;
+  display: none;
+}
+
+#preloaderRecuperarSenha{
+  margin-top: 165px;
+  display: none;
+}
+
+#preloaderRelatorio{
+  margin-top: 65px;
+  display: none;
+}
+
+.btn-pesquisa {
+  border-radius: 0px 10px 10px 0px;
+  border-left: none;
+  background-color: #D9D9D9;
+  border: none;
+  color: var(--corBotao);
+  font-size: 18px;
+  padding: 10px;
+}
