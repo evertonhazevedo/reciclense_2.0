@@ -31,70 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Authorization: "Bearer " + storageToken
         }
     };
-
-      
-      fetch('https://reciclense.netlify.app/btn-dinamico', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-
-    // fetch('https://reciclense.netlify.app/btn-dinamico', options)
-    //     .then(response => response.json())
-    //     .then(async response => {
-
-    //         //Usuário logado
-    //         if (response.success) {
-
-    //             localStorage.setItem("contSessaoExpirada", 1);
-
-    //             //Caso esteja na tela inicial o nome do botão será : 'Área do usuário'
-    //             if (url == "/index.html" || url == "/" || url == '/src/pages/gerenciaColetor.html' || url == '/src/pages/pessoaFisicaPerfil.html' 
-    //             || url == '/src/pages/pessoaJuridicaPerfil.html' || url == '/src/pages/contato.html') {
-
-    //                 button.type = 'button';
-    //                 button.innerHTML = 'Área do usuário';
-    //                 button.className = 'btn btn-primary';
-
-    //                 //Função de click para redirecionar para a área do usuário correta
-    //                 button.onclick = function () {
-
-    //                     if (response.tp_perfil == 'fisica') {
-    //                         window.location.href = "/src/pages/pessoaFisicaPrincipal.html";
-    //                     } else {
-    //                         window.location.href = "/src/pages/pessoaJuridicaPrincipal.html";
-    //                     }
-
-    //                 };
-
-    //                 //Caso esteja na tela pessoaFisícaPrincipal o nome do botão será : 'Solicitar Coleta'
-    //             } else if (url == "/src/pages/pessoaFisicaPrincipal.html") {
-
-    //                 button.type = 'button';
-    //                 button.innerHTML = 'Solicitar Coleta';
-    //                 button.className = 'btn btn-primary';
-
-    //                 //Caso esteja na tela pessoaJurídicaPrincipal o nome do botão será : 'Buscar Coleta'
-    //             } else {
-
-    //                 button.type = 'button';
-    //                 button.innerHTML = 'Cadastrar Coletor';
-    //                 button.className = 'btn btn-primary';
-
-    //             }
-
-    //             //Usuario Deslogado
-    //         } else {
-
-    //             button.type = 'button';
-    //             button.innerHTML = 'Entrar';
-    //             button.className = 'btn btn-primary';
-
-    //         }
-    //     })
-    //     .catch(err => console.error(err));
-
-    // let btnDinamico = document.getElementById('btnDinamico');
-    // btnDinamico.appendChild(button);
+;
 }, false);
 
 //Deslogar usuario
