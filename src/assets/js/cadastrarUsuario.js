@@ -44,7 +44,7 @@ document.getElementById('btnCriarConta')
                 })
             };
 
-            fetch('http://localhost:5500/cad-usuario', options)
+            fetch('https://reciclense.netlify.app/cad-usuario', options)
                 .then(response => response.json())
                 .then(async response => {
                     if (response.success == false) {

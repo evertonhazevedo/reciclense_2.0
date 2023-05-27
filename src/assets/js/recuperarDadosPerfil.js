@@ -9,7 +9,7 @@ const options = {
 };
 
 //Configuração da rota
-fetch('http://localhost:5500/recuperar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
+fetch('https://reciclense.netlify.app/recuperar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
     .then(response => response.json())
     .then(response => {
 

@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    fetch('http://localhost:5500/btn-dinamico', options)
+    fetch('https://reciclense.netlify.app/btn-dinamico', options)
         .then(response => response.json())
         .then(async response => {
 
@@ -118,7 +118,7 @@ document.addEventListener('click', function () {
         }
     };
 
-    fetch('http://localhost:5500/btn-dinamico', options)
+    fetch('https://reciclense.netlify.app/btn-dinamico', options)
         .then(response => response.json())
         .then(async response => {
 

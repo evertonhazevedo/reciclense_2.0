@@ -55,7 +55,7 @@ function handleCredentialResponse(response) {
         })
       };
 
-      fetch('http://localhost:5500/salvar-tipo-perfil', options)
+      fetch('https://reciclense.netlify.app/salvar-tipo-perfil', options)
         .then(response => response.json())
         .then(response => {
 
@@ -94,7 +94,7 @@ function handleCredentialResponse(response) {
               })
             };
 
-            fetch('http://localhost:5500/excluir-usuario', options)
+            fetch('https://reciclense.netlify.app/excluir-usuario', options)
               .then(response => response.json())
               .then(async response => {
                 if (response.success) {
@@ -121,7 +121,7 @@ function handleCredentialResponse(response) {
     })
   };
 
-  fetch('http://localhost:5500/usuario-google', options)
+  fetch('https://reciclense.netlify.app/usuario-google', options)
     .then(response => response.json())
     .then(async response => {
 

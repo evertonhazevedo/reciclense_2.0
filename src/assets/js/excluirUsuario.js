@@ -27,7 +27,7 @@ document.getElementById('btnExcluirPerfil')
                     })
                 };
 
-                fetch('http://localhost:5500/excluir-usuario', options)
+                fetch('https://reciclense.netlify.app/excluir-usuario', options)
                     .then(response => response.json())
                     .then(async response =>  {
 

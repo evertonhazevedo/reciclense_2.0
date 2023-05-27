@@ -42,7 +42,7 @@ function consultarCNPJ(cnpj) {
                     }
                   };
                   
-                  fetch('http://localhost:5500/recuperar-nome-estado/'+ data.uf, options)
+                  fetch('https://reciclense.netlify.app/recuperar-nome-estado/'+ data.uf, options)
                     .then(response => response.json())
                     .then(response =>{
 

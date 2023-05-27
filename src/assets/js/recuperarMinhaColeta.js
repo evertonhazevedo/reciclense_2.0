@@ -63,7 +63,7 @@ function editarColeta(cd_coleta) {
 
 
 
-    fetch('http://localhost:5500/atualizar-coleta', options)
+    fetch('https://reciclense.netlify.app/atualizar-coleta', options)
         .then(response => response.json())
         .then(async response => {
 

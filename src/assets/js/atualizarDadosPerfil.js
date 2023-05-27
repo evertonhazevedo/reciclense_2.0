@@ -86,7 +86,7 @@ document.getElementById('btnSalvarPerfil')
                     };
 
                     //Chamada da requisição
-                    fetch('http://localhost:5500/atualizar-dados-perfil', options)
+                    fetch('https://reciclense.netlify.app/atualizar-dados-perfil', options)
                         .then(response => response.json())
                         .then(response => {
 

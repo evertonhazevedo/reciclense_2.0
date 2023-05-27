@@ -23,7 +23,7 @@ document.getElementById('btnExcluirColetor').addEventListener('click', function 
         })
     };
 
-    fetch('http://localhost:5500/excluir-coletor', options)
+    fetch('https://reciclense.netlify.app/excluir-coletor', options)
         .then(response => response.json())
         .then(async response => {
 

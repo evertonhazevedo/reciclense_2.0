@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function frontValidarDadosPerfil()
         headers: { 'Content-Type': 'application/json' }
     };
 
-    fetch('http://localhost:5500/validar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
+    fetch('https://reciclense.netlify.app/validar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
         .then(response => response.json())
         .then(async response => {
 

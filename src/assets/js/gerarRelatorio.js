@@ -25,7 +25,7 @@ document.getElementById('btnGerarRelatorio')
             })
         };
 
-        fetch('http://localhost:5500/gerar-relatorio', options)
+        fetch('https://reciclense.netlify.app/gerar-relatorio', options)
             .then(response => response.json())
             .then(async response => {
 
@@ -48,7 +48,7 @@ document.getElementById('btnGerarRelatorio')
                             
                             let iframe = document.createElement('iframe');
 
-                            iframe.setAttribute('src', 'http://localhost:5500/baixar-relatorio/' + pdf[5]);
+                            iframe.setAttribute('src', 'https://reciclense.netlify.app/baixar-relatorio/' + pdf[5]);
 
                             document.getElementById('baixarRelatorio').appendChild(iframe).setAttribute('style', 'display: none');
                         }
