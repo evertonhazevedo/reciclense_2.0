@@ -2,7 +2,7 @@
   "name": "reciclense_2.0",
   "version": "1.0.0",
   "description": "PROJETO 4° PERÍODO - CADEIRA DE PROJETOS IV",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "14.x"
   },
