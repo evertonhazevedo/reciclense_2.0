@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'referrerPolicy': 'strict-origin-when-cross-origin',
             Authorization: "Bearer " + storageToken
         }
     };
