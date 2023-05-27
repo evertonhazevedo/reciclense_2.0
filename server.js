@@ -17,11 +17,11 @@ const rotas = require('./src/routes/routes');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join("https://reciclense-2-0.vercel.app/#", "/")));
+app.use(express.static(path.join(__dirname, "/")));
 
 router.get('/', function (req, res) {
 
-    res.sendFile(path.join("https://reciclense-2-0.vercel.app/#" + '/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 
 });
 
