@@ -28,11 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: {
             'Content-Type': 'application/json',
             Authorization: "Bearer " + storageToken
-        },
-
-        referrerPolicy: {
-            policy: 'strict-origin-when-cross-origin'
-          }
+        }
     };
 
     fetch('https://reciclense.netlify.app/btn-dinamico', options)
