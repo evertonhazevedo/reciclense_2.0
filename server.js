@@ -13,11 +13,18 @@ const models = require('./src/models/models');
 //Importação das rotas
 const rotas = require('./src/routes/routes');
 
+app.use('/', router);
+app.use(rotas);
+app.use(cors());
+//app.use(cookieParser());
+app.use(express.json());
+app.listen(process.env.port || 5500);
+
 //Configurações
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, "/")));
+// app.use(express.static(path.join(__dirname, "/")));
 
 router.get('/', function (req, res) {
 
@@ -31,11 +38,3 @@ router.get('/', function (req, res) {
     // res.sendFile(path.join(__dirname + '/index.html'));
 
 });
-
-app.use('/', router);
-app.use(rotas);
-app.use(cors());
-//app.use(cookieParser());
-app.use(express.json());
-app.listen(process.env.port || 5500);
-
