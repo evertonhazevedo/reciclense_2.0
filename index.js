@@ -7,8 +7,6 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const port = process.env.PORT || 5500;
-
 //Importação das Tabelas
 const models = require('./src/models/models');
 
@@ -33,5 +31,5 @@ app.use(rotas);
 app.use(cors());
 //app.use(cookieParser());
 app.use(express.json());
-//app.listen(process.env.port || 5500);
+app.listen(process.env.port || 5500);
 
