@@ -1,8 +1,8 @@
 //Configurações
 const express = require('express');
 const app = express();
-// const path = require('path');
-// const router = express.Router();
+const path = require('path');
+const router = express.Router();
 //const cookieParser = require('cooki-parser');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -17,16 +17,16 @@ const rotas = require('./src/routes/routes');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//app.use(express.static(path.join(__dirname, "/")));
+app.use(express.static(path.join(__dirname, "/")));
 
-app.get('/', function (req, res) {
+router.get('/', function (req, res) {
 
     return res.json('Hello World');
     // res.sendFile(path.join(__dirname + '/index.html'));
 
 });
 
-//app.use('/', router);
+app.use('/', router);
 app.use(rotas);
 app.use(cors());
 //app.use(cookieParser());
