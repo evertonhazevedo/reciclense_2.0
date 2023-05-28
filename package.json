@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evertonhazevedo/reciclense_2.0.git"
+    "url": "git+https://github.com/evertonhazevedo/reciclense_2.0_api_back_end.git"
   },
   "author": "Everton Azevedo, Magnum Santos e Vinicius Lima",
   "license": "ISC",
