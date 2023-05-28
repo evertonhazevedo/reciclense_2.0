@@ -7,7 +7,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const port = process.eventNames.PORT || 5500;
+const port = process.env.PORT || 5500;
 
 //Importação das Tabelas
 const models = require('./src/models/models');
