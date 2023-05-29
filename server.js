@@ -33,8 +33,6 @@ router.get('/', function (req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // return res.json('Hello World');
-
     res.sendFile(path.join(__dirname + '/index.html'));
 
 });
