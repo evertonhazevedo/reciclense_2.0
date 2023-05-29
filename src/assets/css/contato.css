@@ -1,0 +1,25 @@
+.headingContato {
+  color: var(--corPadrao);
+  position: static;
+  text-align: center;
+  margin-top: 80px;
+}
+
+div#contato {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 1.5px black;
+}
+
+#card-1 {
+  background-color: #26881B;
+}
+
+#card-2 {
+  background-color: #F7CB14;
+}
+
+#card-3 {
+  background-color: #516BBF;
+}
