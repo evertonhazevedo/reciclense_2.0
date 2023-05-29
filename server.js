@@ -8,10 +8,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 //Importação das Tabelas
-const models = require('../src/models/models');
+const models = require('./src/models/models');
 
 //Importação das rotas
-const rotas = require('../src/routes/routes');
+const rotas = require('./src/routes/routes');
 
 app.use('/', router);
 app.use(rotas);
