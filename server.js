@@ -24,7 +24,7 @@ app.listen(process.env.port || 5500);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.use(express.static(path.join(__dirname, "/")));
+app.use(express.static(path.join(__dirname, "/")));
 
 router.get('/', function (req, res) {
 
@@ -33,8 +33,8 @@ router.get('/', function (req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    return res.json('Hello World');
+    // return res.json('Hello World');
 
-    // res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 
 });

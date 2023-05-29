@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/assets/css/bootstrap-icons.css">
+  <link href="src/assets/css/menu.css" rel="stylesheet">
+  <link href="src/assets/css/index.css" rel="stylesheet">
+  <link href="src/assets/css/geral.css" rel="stylesheet">
+
+  <!--Import fonte padrão-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+
+  <title>Reciclense - Home Page</title>
+
+</head>
+
+<body>
+  <!--Navbar geral-->
+  <div class="divMenu container-fluid sticky-top" id="nav-container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="src/assets/img/logo.svg" alt="Reciclense" width="200" height="77"
+          class="d-inline-block align-text-top" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link align-text-center" aria-current="page" href="#">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quem-somos">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#como-funciona">Como Funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#materiais-reciclaveis">Materiais Recicláveis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/src/pages/contato.html">Contato</a>
+          </li>
+        </ul>
+        <div id="btnDinamico" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#formLogin">
+        </div>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <!--Inicio-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div id="slide-1" class="carousel-item">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+              <img src="src/assets/img/solicite-1.png" class="img-fluid" alt="Solicitar coleta">
+            </div>
+            <div id="bg-slide-1" class="col-md-6 d-flex align-items-center justify-content-center">
+              <div class="slide-container">
+                <h5>Solicite uma coleta e <br> contribua com o meio ambiente</h5>
+                <button type="button" class="btn-slide1 btn btn-primary">Solicite uma coleta</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="slide-2" class="carousel-item">
+          <div class="row">
+            <div id="bg-slide-2" class="col-md-6 d-flex align-items-center justify-content-center">
+              <div class="slide-container">
+                <h5 class="pe-lg-8">É de uma cooperativa? <br> Busque por coletas</h5>
+                <button type="button" class="btn-slide2 btn btn-primary">Buscar coleta</button>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+              <img src="src/assets/img/solicite-1.png" class="img-fluid" alt="Buscar Coleta">
+            </div>
+
+          </div>
+        </div>
+        <div id="slide-3" class="carousel-item active">
+          <img src="src/assets/img/slide-3.jpg" height="455" class="d-block w-100" alt="Meio Ambiente">
+          <div class="carousel-caption d-md-block">
+            <h5>No Brasil, apenas 4% de resíduos sólidos são enviados para a reciclagem</h5>
+            <p>Ajude a aumentar essa porcentagem</p>
+            <a role="button" class="btn btn-primary" href="#como-funciona">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+    <!-- Quem Somos -->
+    <div id="quem-somos">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <h3>Quem somos</h3>
+            <p>Somos a Reciclense, uma plataforma que permite conectar o cidadão que deseja realizar o descarte
+              consciente de material reciclavel, com o catador que realizará a coleta.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <img src="src/assets/img/logo-2.svg" alt="Reciclense">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Como Funciona-->
+    <div id="como-funciona">
+      <div id="comofunciona-slide" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#comofunciona-slide" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#comofunciona-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#comofunciona-slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="comofunciona-container d-flex align-items-center justify-content-center">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-8">
+                  <h5>
+                    <lable class="numero">1.</lable> Solicite uma coleta
+                  </h5>
+                  <p>Você solicita uma coleta informando
+                    a frequencia e o material deixado</p>
+                </div>
+                <div class="col-md-2 d-flex justify-content-center">
+                  <img src="src/assets/icons/como-funciona-1.png" alt="solicitando a coleta">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="comofunciona-container d-flex align-items-center justify-content-center">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-8">
+                  <h5>
+                    <lable class="numero">2.</lable> Solicitação em andamento
+                  </h5>
+                  <p>A cooperativa busca as solicitações da
+                    região e passa o roteiro para o catador</p>
+                </div>
+                <div class="col-md-2 d-flex justify-content-center">
+                  <img src="src/assets/icons/como-funciona-2.png" alt="Solicitação em andamento">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="comofunciona-container d-flex align-items-center justify-content-center">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-10">
+                  <h5>
+                    <lable class="numero">3.</lable> Recolhimento do material
+                  </h5>
+                  <p>O catador recolhe o material no
+                    endereço informado</p>
+                </div>
+                <div class="col-md-2 d-flex justify-content-center">
+                  <img src="src/assets/icons/como-funciona-3.png" alt="Recolhimento do material">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#comofunciona-slide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#comofunciona-slide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Materiais Recicláveis-->
+    <div id="materiais-reciclaveis">
+      <!--Container-->
+      <div class="container">
+        <!--Linha-->
+        <div class="row justify-content-center">
+          <!--Coluna-->
+          <div class="col-12">
+            <h3>Materiais Recicláveis</h3>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center justify-content-center">
+            <div class="card" id="card-1" style="width: 18rem;">
+              <img class="card-img-top" src="src/assets/img/mat-reciclavel-plastico.png" alt="Plástico">
+              <div class="card-body">
+                <h4>Plástico</h4>
+                <p class="card-text">Sacola, Garrafa Pet, Galões, Tampinhas de garrafa, Copos Descartáveis...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center justify-content-center">
+            <div class="card" id="card-2" style="width: 18rem;">
+              <img class="card-img-top" src="src/assets/img/mat-reciclavel-metal.png" alt="Metal">
+              <div class="card-body">
+                <h4>Metal</h4>
+                <p class="card-text">Latinhas de bebidas e condimentos, desodorante, talheres de metal...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center justify-content-center">
+            <div class="card" id="card-3" style="width: 18rem;">
+              <img class="card-img-top" src="src/assets/img/mat-reciclavel-papel.png" alt="Papel">
+              <div class="card-body">
+                <h4>Papel</h4>
+                <p class="card-text">Folhas, Jornais, Caixas de Leite, Caixas de Papelão...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center justify-content-center">
+            <div class="card" id="card-4" style="width: 18rem;">
+              <img class="card-img-top" src="src/assets/img/mat-reciclavel-vidro.png" alt="Vidro">
+              <div class="card-body">
+                <h4>Vidro</h4>
+                <p class="card-text">Garrafa de Vidro, Potes, Vasos, Pratos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn-whatsapp bi bi-whatsapp"
+      href="https://wa.me/5581999500108?text=Ol%C3%A1%2C+vim+atrav%C3%A9s+do+site%21" target="_blank"></a>
+
+  </main>
+
+  <!-- Modal Login -->
+  <div id="login">
+    <div class="col-md-6">
+      <!-- Modal -->
+      <div class="modal fade" id="formLogin" tabindex="-1" role="dialog" aria-labelledby="formLogin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!--Formulário de Login-->
+              <form>
+                <div class="form-group">
+                  <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <h4 class="headings">Entrar</h4>
+                  <label for="exampleInputEmail1" class="headerInput">Email:</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Informe seu email" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="headerInput">Senha:</label>
+                  <input type="password" name="senha" class="form-control" id="exampleInputPassword1"
+                    placeholder="Informe sua senha" required>
+                  <button class="btnRecuperarSenha" data-bs-toggle="modal"
+                    data-bs-target="#formRecuperarSenha">Recuperar senha</button>
+                </div>
+                <div>
+                  <button type="button" id="btnEntrar"
+                    class=" btnCriarConta  form-control btn btn-primary">Entrar</button><br>
+                  <p class="text-center" style="color:#000;">ou</p>
+                  <div class="">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+                        <div id="btnLoginGoogle"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="btnTxt text-center">Ainda não possui cadastro?<button class="btnCadastrar"
+                      data-bs-toggle="modal" data-bs-target="#formCadastro">Cadastre-se</button></p>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Cadastro -->
+  <div id="cadastro">
+    <div class="col-md-6">
+      <!-- Modal -->
+      <div class="modal fade" id="formCadastro" tabindex="-1" role="dialog" aria-labelledby="formCadastro"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <!--Formulário de cadastro-->
+              <form>
+                <div class="modal-footer">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="form-group">
+                  <h4 class=" headings">Cadastre-se</h4>
+                  <label for="cadEmail" class="headerInput">Email</label>
+                  <input type="email" class="form-control" name="cadEmail" id="cadEmail" aria-describedby="emailHelp"
+                    placeholder="Informe seu email..." required>
+                </div>
+                <div class="form-group">
+                  <label for="cadSenha" class="headerInput">Senha</label>
+                  <input type="password" class="form-control" name="cadSenha" id="cadSenha"
+                    placeholder="Informe sua senha..." required>
+                  <div id="divForcaSenha" class="progress"></div>
+                  <label class="headerInput">Tipo de Usuário</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="cadTipo" id="cadFisica" value="fisica" checked>
+                  <label class="form-check-label" for="cadFisica">
+                    Pessoa Fisíca
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="cadTipo" id="cadJuridica" value="juridica">
+                  <label class="form-check-label" for="cadJuridica">
+                    Pessoa Jurídica
+                  </label>
+                </div>
+                <div>
+                  <button type="button" id="btnCriarConta" class=" btnCriarConta  form-control btn btn-primary">Criar
+                    Conta</button><br>
+                  <p class="btnTxt text-center">Já possui cadastro?<button class="btnFazerLogin" data-bs-toggle="modal"
+                      data-bs-target="#formLogin">Fazer Login</button></p>
+                </div>
+                <div class="campo-erro alert alert-danger d-none">
+                  Preencha o campo <span id="campo-erro"></span>!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Recuperar Senha -->
+  <div id="recuperarSenha">
+    <div class="col-md-6">
+      <!-- Modal -->
+      <div class="modal fade" id="formRecuperarSenha" tabindex="-1" role="dialog" aria-labelledby="formRecuperarSenha"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <!--Formulário Enviar Email Para Recuperar Senha-->
+              <form>
+                <div class="modal-footer">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <h4 class=" headings">Recuperar Senha</h4>
+                      <label for="cadEmail" class="headerInput">Email</label>
+                      <input type="email" class="form-control" name="cadEmail" id="recuperarSenhaEmail"
+                        aria-describedby="emailHelp" placeholder="Informe seu email..." required>
+                    </div>
+                  </div>
+                  <div class="spinner-border text-primary" id="preloaderRecuperarSenha" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+                <div>
+                  <button type="button" id="btnRecuperarSenha"
+                    class=" btnCriarConta  form-control btn btn-primary">Enviar email</button><br>
+                  <p class="btnTxt text-center">Já possui cadastro?<button class="btnFazerLogin" data-bs-toggle="modal"
+                      data-bs-target="#formLogin">Fazer Login</button></p>
+                </div>
+                <div class="campo-erro alert alert-danger d-none">
+                  Preencha o campo <span id="campo-erro"></span>!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright: Todos os direitos reservados.
+      <a href="/"> reciclense.com.br</a>
+    </div>
+  </footer>
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+  integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!--Import Scripts-->
+<script type="text/JavaScript" src="src/assets/js/btnDinamico.js"></script>
+<script type="text/JavaScript" src="src/assets/js/mascaras.js"></script>
+<script type="text/JavaScript" src="src/assets/js/validarLogin.js"></script>
+<script type="text/JavaScript" src="src/assets/js/cadastrarUsuario.js"></script>
+<script type="text/JavaScript" src="src/assets/js/loginGoogle.js"></script>
+<script type="text/JavaScript" src="src/assets/js/validarForcaSenha.js"></script>
+<script type="text/JavaScript" src="src/assets/js/recuperarSenha.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+
+</html>

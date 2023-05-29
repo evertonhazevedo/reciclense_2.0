@@ -1,0 +1,60 @@
+.pesquisarColetor {
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+
+#btnPesquisarColetor {
+    margin-top: 54px;
+}
+
+#divGerenciaColetor {
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+
+.teste{
+    margin-right: 10px;
+}
+.tableGerenciaUsuario{
+
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+    border-style:solid;
+    border-color: var(--corPadrao);
+    
+    
+}
+
+
+/*Modal Gerencia Coletor*/
+.btnEditarColetor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btnExcluirColetor {
+    background: red;
+}
+
+.btn-close {
+    position: absolute;
+}
+
+.modal-footer {
+    justify-content: end;
+    border: none;
+}
+
+#headingPesquiseSolicitacao {
+    margin-bottom: 50px;
+}
+
+/* Pesquisa */
+
+input#iptPesquisarColetor {
+    border-radius: 10px 0px 0px 10px;
+    background-color: #D9D9D9;
+    border: none;
+}
