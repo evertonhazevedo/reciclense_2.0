@@ -3,11 +3,12 @@ document.getElementById('btnCriarConta')
     .addEventListener('click', function () {
 
         const baseUrl = localStorage.getItem("baseUrl");
-        
+
         let erro = document.querySelector(".alert");
         let campo = document.getElementById('campo-erro');
         let campoEmail = document.getElementById('cadEmail');
         let campoSenha = document.getElementById('cadSenha');
+        let campoConfirmarSenha = document.getElementById('cadSenhaConfirmacao');
         let email = document.getElementById('cadEmail').value;
         let senha = document.getElementById('cadSenha').value;
         let tp_perfil = document.querySelector('input[name=cadTipo]:checked').value;
@@ -21,19 +22,38 @@ document.getElementById('btnCriarConta')
 
         //valida o campo email
         if (campoEmail.value == "") {
+
             erro.classList.remove("d-none");
-            campo.innerHTML = "email" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Preencha o campo email" // nome do campo que não foi preenchido!
             campoEmail.focus();
             campoEmail.classList.add("is-invalid");
 
-        }
+            //valida o campo confirmar senha
+        } else if (campoConfirmarSenha.value == "") {
 
-        //valida o campo senha
-        else if (campoSenha.value == "") {
             erro.classList.remove("d-none");
-            campo.innerHTML = "senha" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Preencha o campo confirmar senha" // nome do campo que não foi preenchido!
+            campoConfirmarSenha.focus();
+            campoConfirmarSenha.classList.add("is-invalid");
+
+            //valida o campo senha
+        } else if (campoSenha.value == "") {
+
+            erro.classList.remove("d-none");
+            campo.innerHTML = "Preencha o campo senha" // nome do campo que não foi preenchido!
             campoSenha.focus();
             campoSenha.classList.add("is-invalid");
+
+            //valida as senhas sao iguais
+        } else if (campoSenha.value != campoConfirmarSenha.value) {
+
+            erro.classList.remove("d-none");
+            campoSenha.focus();
+            campo.innerHTML = "As senhas devem ser iguais" // nome do campo que não foi preenchido!
+            campoConfirmarSenha.focus();
+            campoSenha.classList.add("is-invalid");
+            campoConfirmarSenha.classList.add("is-invalid");
+
         } else {
 
             const options = {
@@ -56,7 +76,7 @@ document.getElementById('btnCriarConta')
                             text: 'Usuário já cadastrado!'
                         });
                     } else {
-                        
+
                         const Toast = Swal.mixin({
                             toast: true,
                             position: 'top-end',
