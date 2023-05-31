@@ -20,7 +20,7 @@ document.getElementById('documento_principal')
 
         let nascimento = document.getElementById('nascimento').value;
         let origem = 'web';
-        let token = 'YjjcsW_hQTKB6Tb8J1KQHbj4bAz_WBGLoHlcXWI2'
+        let token = 'u_ypy-1XJyKIFB6qKGSMGeWn2iH7kYHNa0728Bf5'
         let cpfCompleto = document.getElementById('documento_principal').value;
 
         cpfSemPonto = cpfCompleto.replace('.', '');
