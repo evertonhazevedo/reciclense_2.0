@@ -15,7 +15,7 @@ document.getElementById('btnRecuperarSenha')
             })
         };
 
-        fetch('https://reciclense.netlify.app/recuperar-senha', options)
+        fetch('http://localhost:5500/recuperar-senha', options)
             .then(response => response.json())
             .then(response => {
 

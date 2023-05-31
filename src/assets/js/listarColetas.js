@@ -1,7 +1,7 @@
 // Recuperando o JSON das coletas através do método GET
 const options = { method: 'GET', headers: { 'Content-Type': 'application/json' } };
 
-fetch('https://reciclense.netlify.app/listar-coletas', options)
+fetch('http://localhost:5500/listar-coletas', options)
     .then(response => response.json())
     .then(response => {
 

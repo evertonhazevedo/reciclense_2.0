@@ -38,7 +38,7 @@ document.getElementById('documento_principal')
             })
         };
 
-        fetch('https://reciclense.netlify.app/consultar-cpf', options)
+        fetch('http://localhost:5500/consultar-cpf', options)
             .then(response => response.json())
             .then(async response => {
 

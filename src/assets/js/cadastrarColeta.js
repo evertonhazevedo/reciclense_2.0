@@ -49,7 +49,7 @@ document.getElementById('btnSolicitarColeta')
             })
         };
 
-        fetch('https://reciclense.netlify.app/cadastrar-coleta', options)
+        fetch('http://localhost:5500/cadastrar-coleta', options)
             .then(response => response.json())
             .then(async response => {
                 if (response.success == false) {

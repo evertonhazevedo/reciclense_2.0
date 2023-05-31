@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: { 'Content-Type': 'application/json' }
     };
 
-    fetch('https://reciclense.netlify.app/recuperar-estados', options)
+    fetch('http://localhost:5500/recuperar-estados', options)
         .then(response => response.json())
         .then(response => {
 

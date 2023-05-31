@@ -49,7 +49,7 @@ document.getElementById('btnSalvarRedefinirSenha')
                 })
             };
 
-            fetch('https://reciclense.netlify.app/redefinir-senha', options)
+            fetch('http://localhost:5500/redefinir-senha', options)
                 .then(response => response.json())
                 .then(async response => {
 

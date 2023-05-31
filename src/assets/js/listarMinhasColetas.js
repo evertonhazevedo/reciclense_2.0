@@ -3,7 +3,7 @@ const storageIdUsuario = localStorage.getItem('id_usuario');
 
 const options = { method: 'GET' };
 
-fetch('https://reciclense.netlify.app/listar-minhas-coletas/' + storageIdUsuario, options)
+fetch('http://localhost:5500/listar-minhas-coletas/' + storageIdUsuario, options)
     .then(response => response.json())
     .then(response => {
 

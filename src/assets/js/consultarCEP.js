@@ -19,7 +19,7 @@ document.getElementById('cep')
             headers: { 'Content-Type': 'application/json' }
         };
 
-        fetch('https://reciclense.netlify.app/consultar-cep/' + cep, options)
+        fetch('http://localhost:5500/consultar-cep/' + cep, options)
             .then(response => response.json())
             .then(response => {
 

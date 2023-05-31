@@ -63,7 +63,7 @@ document.getElementById('btnCadastrarColetor')
 
             };
 
-            fetch('https://reciclense.netlify.app/cadastrar-coletor', options)
+            fetch('http://localhost:5500/cadastrar-coletor', options)
                 .then(response => response.json())
                 .then(async response => {
                     if (response.success == false) {

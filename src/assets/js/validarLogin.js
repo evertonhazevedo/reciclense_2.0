@@ -17,7 +17,7 @@ document.getElementById('btnEntrar')
         };
         
         //Fetch para redirecionar usuário de acordo com o tp_perfil ou apresentar alert 
-        fetch('https://reciclense.netlify.app/valida-login', options)
+        fetch('http://localhost:5500/valida-login', options)
             .then(response => response.json())
             .then(async response => {
                 

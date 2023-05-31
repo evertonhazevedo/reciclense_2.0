@@ -33,7 +33,7 @@ async function recuperarSenha(req, res) {
         });
 
         //Gerando link para enviar por email
-        const link = `https://reciclense.netlify.app/src/pages/redefinirSenha.html?usuario=` + usuario.cd_usuario + `&token=` + token
+        const link = `http://localhost:5500/src/pages/redefinirSenha.html?usuario=` + usuario.cd_usuario + `&token=` + token
 
         //Criando e conectando transportador de email com o gmail 
         const transporter = nodemailer.createTransport({
