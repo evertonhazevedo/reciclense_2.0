@@ -23,8 +23,6 @@ app.use(express.static(path.join(__dirname, "/")));
 
 router.get('/', function (req, res) {
 
-  // return res.json('Hello World');
-
   res.setHeader('Access-Control-Allow-Origin', 'https://reciclense.herokuapp.com/');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
