@@ -69,6 +69,7 @@
             <li><a class="dropdown-item" id="btnLogout">Sair</a></li>
           </ul>
         </div>
+      </div>
     </nav>
   </div>
   <!--Titulo 1 da página-->
@@ -78,7 +79,7 @@
 
     <h2 class="headingPerfilPessoaFisica2">Seus Dados</h2>
 
-    <form action="">
+    <form>
       <div class="row">
         <div class="col">
           <label for="inputName">Nome:</label>
@@ -99,13 +100,12 @@
         </div>
         <div class="col">
           <label for="inputEmail">Nascimento:</label>
-          <input type="date" id="nascimento" class="form-control inputsPerfil" placeholder="Ex: 2020-10-15" disabled />
+          <input type="date" id="nascimento" class="form-control inputsPerfil" disabled />
         </div>
         <div class="col">
           <label for="inputCPF">CPF:</label>
           <input oninput="mascaraCpf(this)" type="text" name="CPF" id="documento_principal"
-            class="form-control inputsPerfil" id="formGerenciaUser" aria-describedby="CPF" placeholder="000.000.000-00"
-            disabled>
+            class="form-control inputsPerfil" aria-describedby="CPF" placeholder="000.000.000-00" disabled>
         </div>
         <div class="spinner-border text-primary" id="preloader" role="status">
           <span class="visually-hidden">Loading...</span>
@@ -122,7 +122,7 @@
           <input type="text" name="CNPJ" id="cnpj" onblur="consultarCNPJ(this.value)" oninput="mascaraCnpj(this)"
             class="form-control inputsPerfil" placeholder="Digite o CNPJ da empresa" disabled />
         </div>
-        <div class="spinner-border text-primary"  id="preloaderCNPJ" role="status">
+        <div class="spinner-border text-primary" id="preloaderCNPJ" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
         <div class="col">
@@ -158,22 +158,19 @@
         </div>
         <div class="col-sm">
           <label for="inputEstado">Estado:</label>
-          <select type="text" name="Estado" id="nm_estado" class="form-control inputsPerfil"
-            placeholder="Ex: Pernambuco" disabled>
+          <select name="Estado" id="nm_estado" class="form-control inputsPerfil" disabled>
           </select>
         </div>
       </div>
       <div class="row">
         <div class="col-sm">
           <label for="inputCidade">Cidade:</label>
-          <select type="text" name="Cidade" id="nm_cidade" class="form-control inputsPerfil" placeholder="Ex: Recife"
-            disabled>
+          <select name="Cidade" id="nm_cidade" class="form-control inputsPerfil" disabled>
           </select>
         </div>
         <div class="col-sm">
           <label for="inputBairro">Bairro:</label>
-          <input type="text" name="Bairro" id="nm_bairro" class="form-control inputsPerfil" placeholder="Ex: Varzea"
-            disabled />
+          <input name="Bairro" id="nm_bairro" class="form-control inputsPerfil" disabled />
         </div>
       </div>
 
@@ -181,10 +178,10 @@
       <!--Botoes-->
 
       <div style="text-align: right">
-        <button type="button" id="btnSalvarPerfil" class="btn btn-primary i bi-archive botoesPerfil" hidden></i> Salvar
-        </button>
-        <button type="button" id="btnEditarPerfil" class="btn btn-secondary i bi-pencil-square"></i> Editar </button>
-        <button type="button" id="btnExcluirPerfil" class="btn btn-danger i bi-trash3"></i> Excluir </button>
+        <button type="button" id="btnSalvarPerfil" class="btn btn-primary i bi-archive botoesPerfil" hidden>
+          Salvar</button>
+        <button type="button" id="btnEditarPerfil" class="btn btn-secondary i bi-pencil-square">Editar </button>
+        <button type="button" id="btnExcluirPerfil" class="btn btn-danger i bi-trash3"> Excluir </button>
       </div>
     </form>
 
@@ -227,14 +224,14 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!--Import Scripts-->
-<script type="text/JavaScript" src="../assets/js/btnDinamico.js"></script>
-<script type="text/JavaScript" src="../assets/js/editarPerfil.js"></script>
-<script type="text/JavaScript" src="../assets/js/mascaras.js"></script>
-<script type="text/JavaScript" src="../assets/js/atualizarDadosPerfil.js"></script>
-<script type="text/JavaScript" src="../assets/js/excluirUsuario.js"></script>
-<script type="text/JavaScript" src="../assets/js/consultarCEP.js"></script>
-<script type="text/JavaScript" src="../assets/js/recuperarDadosPerfil.js"></script>
-<script type="text/JavaScript" src="../assets/js/consultarCNPJ.js"></script>
-<script type="text/JavaScript" src="../assets/js/consultarCPF.js"></script>
+<script src="../assets/js/btnDinamico.js"></script>
+<script src="../assets/js/editarPerfil.js"></script>
+<script src="../assets/js/mascaras.js"></script>
+<script src="../assets/js/atualizarDadosPerfil.js"></script>
+<script src="../assets/js/excluirUsuario.js"></script>
+<script src="../assets/js/consultarCEP.js"></script>
+<script src="../assets/js/recuperarDadosPerfil.js"></script>
+<script src="../assets/js/consultarCNPJ.js"></script>
+<script src="../assets/js/consultarCPF.js"></script>
 
 </html>
