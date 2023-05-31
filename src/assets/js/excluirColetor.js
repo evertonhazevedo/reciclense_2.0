@@ -1,5 +1,7 @@
 document.getElementById('btnExcluirColetor').addEventListener('click', function () {
+
     let cpfColetor = document.getElementById('cpfColetor').value
+    const baseUrl = localStorage.getItem("baseUrl");
 
 
     //Mensagem para confirmar se o usuario quer realmente salvar os dados
@@ -23,7 +25,7 @@ document.getElementById('btnExcluirColetor').addEventListener('click', function 
         })
     };
 
-    fetch('https://reciclense.herokuapp.com/excluir-coletor', options)
+    fetch(baseUrl + '/excluir-coletor', options)
         .then(response => response.json())
         .then(async response => {
 

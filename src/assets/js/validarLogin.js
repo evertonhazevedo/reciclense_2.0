@@ -17,7 +17,7 @@ document.getElementById('btnEntrar')
         };
         
         //Fetch para redirecionar usuário de acordo com o tp_perfil ou apresentar alert 
-        fetch('https://reciclense.herokuapp.com/valida-login', options)
+        fetch(baseUrl + '/valida-login', options)
             .then(response => response.json())
             .then(async response => {
                 

@@ -1,6 +1,8 @@
 /*Login Google*/
 function handleCredentialResponse(response) {
 
+  const baseUrl = localStorage.getItem("baseUrl");
+
   /*Descriptografando objeto respota do gmail*/
   const data = jwt_decode(response.credential);
 
@@ -55,7 +57,7 @@ function handleCredentialResponse(response) {
         })
       };
 
-      fetch('https://reciclense.herokuapp.com/salvar-tipo-perfil', options)
+      fetch(baseUrl + '/salvar-tipo-perfil', options)
         .then(response => response.json())
         .then(response => {
 
@@ -94,7 +96,7 @@ function handleCredentialResponse(response) {
               })
             };
 
-            fetch('https://reciclense.herokuapp.com/excluir-usuario', options)
+            fetch(baseUrl + '/excluir-usuario', options)
               .then(response => response.json())
               .then(async response => {
                 if (response.success) {
@@ -121,7 +123,7 @@ function handleCredentialResponse(response) {
     })
   };
 
-  fetch('https://reciclense.herokuapp.com/usuario-google', options)
+  fetch(baseUrl + '/usuario-google', options)
     .then(response => response.json())
     .then(async response => {
 

@@ -2,9 +2,10 @@
 document.getElementById('btnExcluirPerfil')
     .addEventListener('click', function () {
 
-        //Recuperando valores id_usuario e perfil do localStorage
+        //Recuperando valores id_usuario, baseUrl e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
         const storagePerfil = localStorage.getItem('perfil');
+        const baseUrl = localStorage.getItem("baseUrl");
 
         //Mensagem para confirmar se o usuario quer realmente salvar os dados
         Swal.fire({
@@ -27,7 +28,7 @@ document.getElementById('btnExcluirPerfil')
                     })
                 };
 
-                fetch('https://reciclense.herokuapp.com/excluir-usuario', options)
+                fetch(baseUrl + '/excluir-usuario', options)
                     .then(response => response.json())
                     .then(async response =>  {
 

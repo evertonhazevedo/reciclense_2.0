@@ -2,6 +2,8 @@
 document.getElementById('btnCriarConta')
     .addEventListener('click', function () {
 
+        const baseUrl = localStorage.getItem("baseUrl");
+        
         let erro = document.querySelector(".alert");
         let campo = document.getElementById('campo-erro');
         let campoEmail = document.getElementById('cadEmail');
@@ -44,7 +46,7 @@ document.getElementById('btnCriarConta')
                 })
             };
 
-            fetch('https://reciclense.herokuapp.com/cad-usuario', options)
+            fetch(baseUrl + '/cad-usuario', options)
                 .then(response => response.json())
                 .then(async response => {
                     if (response.success == false) {

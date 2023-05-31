@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    const baseUrl = localStorage.getItem("baseUrl");
+
     let selectBairros = document.getElementById('selectBairroRelatorio');
     selectBairros.length = 0;
 
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: { 'Content-Type': 'application/json' }
     };
 
-    fetch('https://reciclense.herokuapp.com/recuperar-bairros', options)
+    fetch(baseUrl + '/recuperar-bairros', options)
         .then(response => response.json())
         .then(response => {
 

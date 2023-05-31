@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function frontValidarDadosPerfil()
 
     const storageIdUsuario = localStorage.getItem('id_usuario');
     const storagePerfil = localStorage.getItem('perfil');
+    const baseUrl = localStorage.getItem("baseUrl");
+
 
     let perfilIncompleto = true;
 
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function frontValidarDadosPerfil()
         headers: { 'Content-Type': 'application/json' }
     };
 
-    fetch('https://reciclense.herokuapp.com/validar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
+    fetch(baseUrl + '/validar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
         .then(response => response.json())
         .then(async response => {
 

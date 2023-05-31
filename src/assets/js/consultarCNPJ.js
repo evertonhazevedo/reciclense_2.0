@@ -1,5 +1,7 @@
 function consultarCNPJ(cnpj) {
 
+    const baseUrl = localStorage.getItem("baseUrl");
+
     document.getElementById('preloaderCNPJ').style.display = 'block';
 
     let estado = document.getElementById("nm_estado");
@@ -42,7 +44,7 @@ function consultarCNPJ(cnpj) {
                     }
                   };
                   
-                  fetch('https://reciclense.herokuapp.com/recuperar-nome-estado/'+ data.uf, options)
+                  fetch(baseUrl + '/recuperar-nome-estado/'+ data.uf, options)
                     .then(response => response.json())
                     .then(response =>{
 

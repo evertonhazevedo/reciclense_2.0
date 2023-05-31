@@ -1,7 +1,8 @@
 function excluirColeta(cd_coleta) {
 
-    //Recuperando valores id_usuario e perfil do localStorage
+    //Recuperando valores id_usuario, baseUrl e perfil do localStorage
     const storageIdUsuario = localStorage.getItem('id_usuario');
+    const baseUrl = localStorage.getItem("baseUrl");
 
     //Mensagem para confirmar se o usuario quer realmente salvar os dados
     Swal.fire({
@@ -25,7 +26,7 @@ function excluirColeta(cd_coleta) {
                 })
             };
 
-            fetch('https://reciclense.herokuapp.com/excluir-coleta', options)
+            fetch(baseUrl + '/excluir-coleta', options)
                 .then(response => response.json())
                 .then(async response => {
 

@@ -1,9 +1,10 @@
-//Recuperando valores id_usuario e perfil do localStorage
+//Recuperando valores id_usuario e baseUrl do localStorage
 const storageIdUsuario = localStorage.getItem('id_usuario');
+const baseUrl = localStorage.getItem("baseUrl");
 
 const options = { method: 'GET' };
 
-fetch('https://reciclense.herokuapp.com/listar-minhas-coletas/' + storageIdUsuario, options)
+fetch(baseUrl + '/listar-minhas-coletas/' + storageIdUsuario, options)
     .then(response => response.json())
     .then(response => {
 

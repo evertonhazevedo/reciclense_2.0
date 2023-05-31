@@ -1,6 +1,9 @@
 document.getElementById('btnRecuperarSenha')
     .addEventListener('click', function () {
 
+
+        const baseUrl = localStorage.getItem("baseUrl");
+
         document.getElementById('btnRecuperarSenha').setAttribute('disabled', '');
 
         document.getElementById('preloaderRecuperarSenha').style.display = 'block';
@@ -15,7 +18,7 @@ document.getElementById('btnRecuperarSenha')
             })
         };
 
-        fetch('https://reciclense.herokuapp.com/recuperar-senha', options)
+        fetch(baseUrl + '/recuperar-senha', options)
             .then(response => response.json())
             .then(response => {
 

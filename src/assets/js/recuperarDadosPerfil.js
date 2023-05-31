@@ -1,7 +1,8 @@
-//Recuperando valores id_usuario e perfil do localStorage
+//Recuperando valores id_usuario, baseUrl e perfil do localStorage
 const storageIdUsuario = localStorage.getItem("id_usuario");
 const storagePerfil = localStorage.getItem("perfil");
 const storageGoogle = localStorage.getItem("google");
+const baseUrl = localStorage.getItem("baseUrl");
 
 const options = {
     method: 'GET',
@@ -9,7 +10,7 @@ const options = {
 };
 
 //Configuração da rota
-fetch('https://reciclense.herokuapp.com/recuperar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
+fetch(baseUrl + '/recuperar-dados-perfil/' + storageIdUsuario + '/' + storagePerfil, options)
     .then(response => response.json())
     .then(response => {
 

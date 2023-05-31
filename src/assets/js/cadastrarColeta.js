@@ -3,6 +3,7 @@ document.getElementById('btnSolicitarColeta')
 
         //Recuperando valores id_usuario e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
+        const baseUrl = localStorage.getItem("baseUrl");
 
         let data = document.getElementById('data-coleta');
         let horario = document.getElementById('horario-coleta');
@@ -49,7 +50,7 @@ document.getElementById('btnSolicitarColeta')
             })
         };
 
-        fetch('https://reciclense.herokuapp.com/cadastrar-coleta', options)
+        fetch(baseUrl + '/cadastrar-coleta', options)
             .then(response => response.json())
             .then(async response => {
                 if (response.success == false) {

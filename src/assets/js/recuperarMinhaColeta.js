@@ -12,11 +12,15 @@ function recuperarMinhaColeta(cd_coleta, data, horario, cd_material, observacao)
     observacaoColeta.value = observacao;
 
     //Adicionando atributo onclick com a função editarColeta no botão de Salvar
-    btnEditarColeta.setAttribute('onclick', 'editarColeta('+ cd_coleta + ')')
-    
+    btnEditarColeta.setAttribute('onclick', 'editarColeta(' + cd_coleta + ')')
+
 }
 
 function editarColeta(cd_coleta) {
+
+
+    const baseUrl = localStorage.getItem("baseUrl");
+
 
     let campoVazio = false;
 
@@ -48,41 +52,41 @@ function editarColeta(cd_coleta) {
 
     } else {
 
-    const options = {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            data: dataColeta.value,
-            horario: horarioColeta.value,
-            observacao: observacaoColeta.value,
-            cd_material: materialColeta.value,
-            cd_coleta: cd_coleta
+        const options = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                data: dataColeta.value,
+                horario: horarioColeta.value,
+                observacao: observacaoColeta.value,
+                cd_material: materialColeta.value,
+                cd_coleta: cd_coleta
 
-        })
-    };
-
-
-
-    fetch('https://reciclense.herokuapp.com/atualizar-coleta', options)
-        .then(response => response.json())
-        .then(async response => {
-
-            //Caso retorne true os dados foram salvos com sucesso
-            if (response.success == true) {
-
-                await Swal.fire('Coleta atualizada com sucesso!', '', 'success');
-                location.reload();
-
-                //Caso retorne false os dados nao foram salvos   
-            } else {
-                await Swal.fire('Não foi possível atualizar os dados da coleta!', '', 'error');
-                location.reload();
-            }
+            })
+        };
 
 
 
-        })
-        .catch(err => console.error(err));
+        fetch(baseUrl + '/atualizar-coleta', options)
+            .then(response => response.json())
+            .then(async response => {
+
+                //Caso retorne true os dados foram salvos com sucesso
+                if (response.success == true) {
+
+                    await Swal.fire('Coleta atualizada com sucesso!', '', 'success');
+                    location.reload();
+
+                    //Caso retorne false os dados nao foram salvos   
+                } else {
+                    await Swal.fire('Não foi possível atualizar os dados da coleta!', '', 'error');
+                    location.reload();
+                }
+
+
+
+            })
+            .catch(err => console.error(err));
     }
 
 }

@@ -3,6 +3,8 @@ document.getElementById('btnGerarRelatorio')
 
         document.getElementById('preloaderRelatorio').style.display = 'block';
 
+        const baseUrl = localStorage.getItem("baseUrl");
+        
         let dtInicio = document.getElementById('dataInicioRelatorio').value;
         let dtFim = document.getElementById('dataFimRelatorio').value;
         let estado = document.getElementById('nm_estado').value;
@@ -25,7 +27,7 @@ document.getElementById('btnGerarRelatorio')
             })
         };
 
-        fetch('https://reciclense.herokuapp.com/gerar-relatorio', options)
+        fetch(baseUrl + '/gerar-relatorio', options)
             .then(response => response.json())
             .then(async response => {
 
@@ -48,7 +50,7 @@ document.getElementById('btnGerarRelatorio')
                             
                             let iframe = document.createElement('iframe');
 
-                            iframe.setAttribute('src', 'https://reciclense.herokuapp.com/baixar-relatorio/' + pdf[5]);
+                            iframe.setAttribute('src', baseUrl + '/baixar-relatorio/' + pdf[5]);
 
                             document.getElementById('baixarRelatorio').appendChild(iframe).setAttribute('style', 'display: none');
                         }

@@ -2,9 +2,10 @@
 document.getElementById('btnSalvarPerfil')
     .addEventListener('click', async function () {
 
-        //Recuperando valores id_usuario e perfil do localStorage
+        //Recuperando valores id_usuario,  baseUrl e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
         const storagePerfil = localStorage.getItem('perfil');
+        const baseUrl = localStorage.getItem("baseUrl");
 
         //Recuperando classe dos botoes salvar e dos campos do formulário de cada tipo de perfil
         let inputs = document.getElementsByClassName("inputsPerfil");
@@ -86,7 +87,7 @@ document.getElementById('btnSalvarPerfil')
                     };
 
                     //Chamada da requisição
-                    fetch('https://reciclense.herokuapp.com/atualizar-dados-perfil', options)
+                    fetch(baseUrl + '/atualizar-dados-perfil', options)
                         .then(response => response.json())
                         .then(response => {
 

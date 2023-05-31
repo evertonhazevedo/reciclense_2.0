@@ -17,6 +17,8 @@ function editarColetor(nome, sobrenome, nascimento, cpf) {
 /*Função para atualizar os dados do coletor*/
 document.getElementById('btnEditarColetor').addEventListener('click', async function () {
 
+    const baseUrl = localStorage.getItem("baseUrl");
+
     let campoVazio = false;
 
     //Recuperando classe dos inputs do formulário
@@ -58,7 +60,7 @@ document.getElementById('btnEditarColetor').addEventListener('click', async func
             })
         };
 
-        fetch('https://reciclense.herokuapp.com/atualizar-coletor', options)
+        fetch(baseUrl + '/atualizar-coletor', options)
             .then(response => response.json())
             .then(async response => {
 

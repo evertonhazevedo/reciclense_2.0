@@ -1,6 +1,8 @@
 document.getElementById('cep')
     .addEventListener('focusout', function () {
 
+        const baseUrl = localStorage.getItem("baseUrl");
+
         document.getElementById('preloaderCEP').style.display = 'block';
 
         let cep = document.getElementById('cep').value;
@@ -19,7 +21,7 @@ document.getElementById('cep')
             headers: { 'Content-Type': 'application/json' }
         };
 
-        fetch('https://reciclense.herokuapp.com/consultar-cep/' + cep, options)
+        fetch(baseUrl + '/consultar-cep/' + cep, options)
             .then(response => response.json())
             .then(response => {
 

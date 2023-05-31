@@ -1,6 +1,8 @@
 document.getElementById('nm_estado')
     .addEventListener('change', function () {
 
+        const baseUrl = localStorage.getItem("baseUrl");
+
         let selectCidades = document.getElementById('nm_cidade');
         let UF = document.getElementById('nm_estado').value;
 
@@ -9,7 +11,7 @@ document.getElementById('nm_estado')
             headers: { 'Content-Type': 'application/json' }
         };
 
-        fetch('https://reciclense.herokuapp.com/recuperar-cidades/' + UF, options)
+        fetch(baseUrl + '/recuperar-cidades/' + UF, options)
             .then(response => response.json())
             .then(response => {
 

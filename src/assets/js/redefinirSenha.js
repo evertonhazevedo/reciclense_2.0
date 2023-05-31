@@ -21,6 +21,8 @@ document.getElementById('mostrarSenha')
 document.getElementById('btnSalvarRedefinirSenha')
     .addEventListener('click', function () {
 
+        const baseUrl = localStorage.getItem("baseUrl");
+
         const urlParams = new URLSearchParams(window.location.search);
 
         let id_usuario = urlParams.get('usuario');
@@ -49,7 +51,7 @@ document.getElementById('btnSalvarRedefinirSenha')
                 })
             };
 
-            fetch('https://reciclense.herokuapp.com/redefinir-senha', options)
+            fetch(baseUrl + '/redefinir-senha', options)
                 .then(response => response.json())
                 .then(async response => {
 

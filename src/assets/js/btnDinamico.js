@@ -1,4 +1,7 @@
 var url = window.location.pathname;
+var baseUrl = window.location.origin;
+
+localStorage.setItem('baseUrl', baseUrl);
 
 const Toast = Swal.mixin({
     toast: true,
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    fetch('https://reciclense.herokuapp.com/btn-dinamico', options)
+    fetch(baseUrl + '/btn-dinamico', options)
         .then(response => response.json())
         .then(async response => {
 
@@ -118,7 +121,7 @@ document.addEventListener('click', function () {
         }
     };
 
-    fetch('https://reciclense.herokuapp.com/btn-dinamico', options)
+    fetch(baseUrl + '/btn-dinamico', options)
         .then(response => response.json())
         .then(async response => {
 

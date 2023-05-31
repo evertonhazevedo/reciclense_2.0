@@ -2,6 +2,7 @@ document.getElementById('documento_principal')
     .addEventListener('focusout', function () {
 
         var url = window.location.pathname;
+        const baseUrl = localStorage.getItem("baseUrl");
 
         if (url == '/src/pages/pessoaJuridicaPrincipal.html') {
             document.getElementById('preloaderColetor').style.display = 'block';
@@ -38,7 +39,7 @@ document.getElementById('documento_principal')
             })
         };
 
-        fetch('https://reciclense.herokuapp.com/consultar-cpf', options)
+        fetch(baseUrl + '/consultar-cpf', options)
             .then(response => response.json())
             .then(async response => {
 

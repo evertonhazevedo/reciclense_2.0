@@ -1,8 +1,9 @@
 document.getElementById('btnCadastrarColetor')
     .addEventListener('click', function () {
 
-        //Recuperando valores id_usuario e perfil do localStorage
+        //Recuperando valores id_usuario, baseUrl e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
+        const baseUrl = localStorage.getItem("baseUrl");
 
         let erro = document.querySelector(".alert");
         let campo = document.getElementById('campo-erro');
@@ -63,7 +64,7 @@ document.getElementById('btnCadastrarColetor')
 
             };
 
-            fetch('https://reciclense.herokuapp.com/cadastrar-coletor', options)
+            fetch(baseUrl + '/cadastrar-coletor', options)
                 .then(response => response.json())
                 .then(async response => {
                     if (response.success == false) {
