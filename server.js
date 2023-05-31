@@ -21,9 +21,9 @@ app.use(express.static(path.join(__dirname, "/")));
 
 router.get('/', function (req, res) {
 
-      return res.json('Hello World');
+      // return res.json('Hello World');
 
-    // res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 
 });
 
