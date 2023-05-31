@@ -1,7 +1,7 @@
 // Recuperando o JSON das coletas através do método GET
 const options = { method: 'GET', headers: { 'Content-Type': 'application/json' } };
 
-fetch('http://localhost:5500/listar-coletas', options)
+fetch('https://reciclense.herokuapp.com/listar-coletas', options)
     .then(response => response.json())
     .then(response => {
 

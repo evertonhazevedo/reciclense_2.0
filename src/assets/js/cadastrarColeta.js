@@ -49,7 +49,7 @@ document.getElementById('btnSolicitarColeta')
             })
         };
 
-        fetch('http://localhost:5500/cadastrar-coleta', options)
+        fetch('https://reciclense.herokuapp.com/cadastrar-coleta', options)
             .then(response => response.json())
             .then(async response => {
                 if (response.success == false) {

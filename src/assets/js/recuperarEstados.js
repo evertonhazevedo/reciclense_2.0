@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: { 'Content-Type': 'application/json' }
     };
 
-    fetch('http://localhost:5500/recuperar-estados', options)
+    fetch('https://reciclense.herokuapp.com/recuperar-estados', options)
         .then(response => response.json())
         .then(response => {
 

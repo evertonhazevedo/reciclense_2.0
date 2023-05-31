@@ -25,7 +25,7 @@ function excluirColeta(cd_coleta) {
                 })
             };
 
-            fetch('http://localhost:5500/excluir-coleta', options)
+            fetch('https://reciclense.herokuapp.com/excluir-coleta', options)
                 .then(response => response.json())
                 .then(async response => {
 

@@ -19,7 +19,7 @@ document.getElementById('cep')
             headers: { 'Content-Type': 'application/json' }
         };
 
-        fetch('http://localhost:5500/consultar-cep/' + cep, options)
+        fetch('https://reciclense.herokuapp.com/consultar-cep/' + cep, options)
             .then(response => response.json())
             .then(response => {
 

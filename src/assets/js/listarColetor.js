@@ -4,7 +4,7 @@ const storageIdUsuario = localStorage.getItem('id_usuario');
 // Recuperando o JSON das coletas através do método GET
 const options = { method: 'GET' };
 
-fetch('http://localhost:5500/listar-coletor/' + storageIdUsuario, options)
+fetch('https://reciclense.herokuapp.com/listar-coletor/' + storageIdUsuario, options)
     .then(response => response.json())
     .then(response => {
 

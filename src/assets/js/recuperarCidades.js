@@ -9,7 +9,7 @@ document.getElementById('nm_estado')
             headers: { 'Content-Type': 'application/json' }
         };
 
-        fetch('http://localhost:5500/recuperar-cidades/' + UF, options)
+        fetch('https://reciclense.herokuapp.com/recuperar-cidades/' + UF, options)
             .then(response => response.json())
             .then(response => {
 

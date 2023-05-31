@@ -15,7 +15,7 @@ document.getElementById('btnRecuperarSenha')
             })
         };
 
-        fetch('http://localhost:5500/recuperar-senha', options)
+        fetch('https://reciclense.herokuapp.com/recuperar-senha', options)
             .then(response => response.json())
             .then(response => {
 
