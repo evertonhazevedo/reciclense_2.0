@@ -2,7 +2,7 @@
 const storageIdUsuario = localStorage.getItem("id_usuario");
 const storagePerfil = localStorage.getItem("perfil");
 const storageGoogle = localStorage.getItem("google");
-const baseUrl = localStorage.getItem("baseUrl");
+var baseUrl = localStorage.getItem("baseUrl");
 
 const options = {
     method: 'GET',
