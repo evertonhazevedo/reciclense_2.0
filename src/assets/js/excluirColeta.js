@@ -2,7 +2,7 @@ function excluirColeta(cd_coleta) {
 
     //Recuperando valores id_usuario, baseUrl e perfil do localStorage
     const storageIdUsuario = localStorage.getItem('id_usuario');
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
     //Mensagem para confirmar se o usuario quer realmente salvar os dados
     Swal.fire({

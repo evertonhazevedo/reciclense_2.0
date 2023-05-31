@@ -17,7 +17,7 @@ function editarColetor(nome, sobrenome, nascimento, cpf) {
 /*Função para atualizar os dados do coletor*/
 document.getElementById('btnEditarColetor').addEventListener('click', async function () {
 
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
     let campoVazio = false;
 

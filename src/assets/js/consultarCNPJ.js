@@ -1,6 +1,6 @@
 function consultarCNPJ(cnpj) {
 
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
     document.getElementById('preloaderCNPJ').style.display = 'block';
 

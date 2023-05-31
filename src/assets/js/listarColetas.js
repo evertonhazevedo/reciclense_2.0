@@ -1,4 +1,4 @@
-const baseUrl = localStorage.getItem("baseUrl");
+var baseUrl = localStorage.getItem("baseUrl");
 
 // Recuperando o JSON das coletas através do método GET
 const options = { method: 'GET', headers: { 'Content-Type': 'application/json' } };

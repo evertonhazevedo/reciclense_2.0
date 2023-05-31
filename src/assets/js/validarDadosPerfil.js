@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function frontValidarDadosPerfil()
 
     const storageIdUsuario = localStorage.getItem('id_usuario');
     const storagePerfil = localStorage.getItem('perfil');
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
 
     let perfilIncompleto = true;

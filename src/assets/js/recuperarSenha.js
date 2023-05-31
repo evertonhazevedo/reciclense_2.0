@@ -2,7 +2,7 @@ document.getElementById('btnRecuperarSenha')
     .addEventListener('click', function () {
 
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         document.getElementById('btnRecuperarSenha').setAttribute('disabled', '');
 

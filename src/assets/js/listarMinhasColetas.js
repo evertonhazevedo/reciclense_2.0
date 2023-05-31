@@ -1,6 +1,6 @@
 //Recuperando valores id_usuario e baseUrl do localStorage
 const storageIdUsuario = localStorage.getItem('id_usuario');
-const baseUrl = localStorage.getItem("baseUrl");
+var baseUrl = localStorage.getItem("baseUrl");
 
 const options = { method: 'GET' };
 

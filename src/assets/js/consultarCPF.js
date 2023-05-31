@@ -2,7 +2,7 @@ document.getElementById('documento_principal')
     .addEventListener('focusout', function () {
 
         var url = window.location.pathname;
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         if (url == '/src/pages/pessoaJuridicaPrincipal.html') {
             document.getElementById('preloaderColetor').style.display = 'block';

@@ -21,7 +21,7 @@ document.getElementById('mostrarSenha')
 document.getElementById('btnSalvarRedefinirSenha')
     .addEventListener('click', function () {
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         const urlParams = new URLSearchParams(window.location.search);
 

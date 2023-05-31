@@ -2,7 +2,7 @@
 document.getElementById('btnCriarConta')
     .addEventListener('click', function () {
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         let erro = document.querySelector(".alert");
         let campo = document.getElementById('campo-erro');

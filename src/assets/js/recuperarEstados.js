@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
     let selectEstados = document.getElementById('nm_estado');
     // const storageIdUsuario = localStorage.getItem("id_usuario");

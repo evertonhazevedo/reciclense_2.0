@@ -3,7 +3,7 @@ document.getElementById('btnCadastrarColetor')
 
         //Recuperando valores id_usuario, baseUrl e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         let erro = document.querySelector(".alert");
         let campo = document.getElementById('campo-erro');

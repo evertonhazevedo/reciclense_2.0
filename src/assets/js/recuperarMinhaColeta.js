@@ -19,7 +19,7 @@ function recuperarMinhaColeta(cd_coleta, data, horario, cd_material, observacao)
 function editarColeta(cd_coleta) {
 
 
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
 
     let campoVazio = false;

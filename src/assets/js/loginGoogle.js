@@ -1,7 +1,7 @@
 /*Login Google*/
 function handleCredentialResponse(response) {
 
-  const baseUrl = localStorage.getItem("baseUrl");
+  var baseUrl = localStorage.getItem("baseUrl");
 
   /*Descriptografando objeto respota do gmail*/
   const data = jwt_decode(response.credential);

@@ -1,7 +1,7 @@
 document.getElementById('btnExcluirColetor').addEventListener('click', function () {
 
     let cpfColetor = document.getElementById('cpfColetor').value
-    const baseUrl = localStorage.getItem("baseUrl");
+    var baseUrl = localStorage.getItem("baseUrl");
 
 
     //Mensagem para confirmar se o usuario quer realmente salvar os dados

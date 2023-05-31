@@ -1,7 +1,7 @@
 document.getElementById('cep')
     .addEventListener('focusout', function () {
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         document.getElementById('preloaderCEP').style.display = 'block';
 

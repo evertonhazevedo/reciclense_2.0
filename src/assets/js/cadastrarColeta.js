@@ -3,7 +3,7 @@ document.getElementById('btnSolicitarColeta')
 
         //Recuperando valores id_usuario e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         let data = document.getElementById('data-coleta');
         let horario = document.getElementById('horario-coleta');

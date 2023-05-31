@@ -5,7 +5,7 @@ document.getElementById('btnSalvarPerfil')
         //Recuperando valores id_usuario,  baseUrl e perfil do localStorage
         const storageIdUsuario = localStorage.getItem('id_usuario');
         const storagePerfil = localStorage.getItem('perfil');
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         //Recuperando classe dos botoes salvar e dos campos do formulário de cada tipo de perfil
         let inputs = document.getElementsByClassName("inputsPerfil");

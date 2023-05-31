@@ -3,7 +3,7 @@ document.getElementById('btnGerarRelatorio')
 
         document.getElementById('preloaderRelatorio').style.display = 'block';
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
         
         let dtInicio = document.getElementById('dataInicioRelatorio').value;
         let dtFim = document.getElementById('dataFimRelatorio').value;

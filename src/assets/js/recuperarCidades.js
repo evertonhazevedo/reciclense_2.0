@@ -1,7 +1,7 @@
 document.getElementById('nm_estado')
     .addEventListener('change', function () {
 
-        const baseUrl = localStorage.getItem("baseUrl");
+        var baseUrl = localStorage.getItem("baseUrl");
 
         let selectCidades = document.getElementById('nm_cidade');
         let UF = document.getElementById('nm_estado').value;
