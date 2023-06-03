@@ -29,20 +29,20 @@ document.getElementById('btnCriarConta')
             campoEmail.classList.add("is-invalid");
 
             //valida o campo confirmar senha
-        } else if (campoConfirmarSenha.value == "") {
-
-            erro.classList.remove("d-none");
-            campo.innerHTML = "Preencha o campo confirmar senha" // nome do campo que não foi preenchido!
-            campoConfirmarSenha.focus();
-            campoConfirmarSenha.classList.add("is-invalid");
-
-            //valida o campo senha
         } else if (campoSenha.value == "") {
 
             erro.classList.remove("d-none");
             campo.innerHTML = "Preencha o campo senha" // nome do campo que não foi preenchido!
             campoSenha.focus();
             campoSenha.classList.add("is-invalid");
+
+            //valida o campo senha
+        } else if (campoConfirmarSenha.value == "") {
+
+            erro.classList.remove("d-none");
+            campo.innerHTML = "Preencha o campo confirmar senha" // nome do campo que não foi preenchido!
+            campoConfirmarSenha.focus();
+            campoConfirmarSenha.classList.add("is-invalid");
 
             //valida as senhas sao iguais
         } else if (campoSenha.value != campoConfirmarSenha.value) {
@@ -61,7 +61,7 @@ document.getElementById('btnCriarConta')
                 title: 'Email inválido!',
                 text: 'Favor informar um email válido.'
             });
-            
+
         } else {
 
             const options = {
