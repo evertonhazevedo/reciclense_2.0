@@ -24,7 +24,7 @@ document.getElementById('btnCriarConta')
         if (campoEmail.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "Preencha o campo email!" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Preencha o campo email" // nome do campo que não foi preenchido!
             campoEmail.focus();
             campoEmail.classList.add("is-invalid");
 
@@ -32,7 +32,7 @@ document.getElementById('btnCriarConta')
         } else if (campoSenha.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "Preencha o campo senha!" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Preencha o campo senha" // nome do campo que não foi preenchido!
             campoSenha.focus();
             campoSenha.classList.add("is-invalid");
 
@@ -40,24 +40,24 @@ document.getElementById('btnCriarConta')
         } else if (campoConfirmarSenha.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "Preencha o campo confirmar senha!" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Preencha o campo confirmar senha" // nome do campo que não foi preenchido!
             campoConfirmarSenha.focus();
             campoConfirmarSenha.classList.add("is-invalid");
 
             //valida as senhas sao iguais
-        } else if (campoSenha.value != campoConfirmarSenha.value) {
+        } else if (campoSenha.value = campoConfirmarSenha.value) {
 
             erro.classList.remove("d-none");
             campoSenha.focus();
-            campo.innerHTML = "As senhas devem ser iguais!" // nome do campo que não foi preenchido!
+            campo.innerHTML = "As senhas devem ser iguais" // nome do campo que não foi preenchido!
             campoConfirmarSenha.focus();
             campoSenha.classList.add("is-invalid");
             campoConfirmarSenha.classList.add("is-invalid");
 
-        } else if (!validarEmail(email)) {
+        } else if (validarEmail(email)) {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "Email inválido!" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Email inválido" // nome do campo que não foi preenchido!
             campoEmail.focus();
             campoEmail.classList.add("is-invalid");
 
