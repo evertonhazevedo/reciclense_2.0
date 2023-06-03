@@ -54,6 +54,14 @@ document.getElementById('btnCriarConta')
             campoSenha.classList.add("is-invalid");
             campoConfirmarSenha.classList.add("is-invalid");
 
+        } else if (!validarEmail(email)) {
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Email inválido!',
+                text: 'Favor informar um email válido.'
+            });
+            
         } else {
 
             const options = {
@@ -107,3 +115,8 @@ document.getElementById('btnCriarConta')
 
         }
     });
+
+function validarEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
