@@ -54,7 +54,7 @@ document.getElementById('btnCriarConta')
             campoSenha.classList.add("is-invalid");
             campoConfirmarSenha.classList.add("is-invalid");
 
-        } else if (validarEmail(email)) {
+        } else if (!validarEmail(email)) {
 
             erro.classList.remove("d-none");
             campo.innerHTML = "Email inválido" // nome do campo que não foi preenchido!
