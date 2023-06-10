@@ -45,7 +45,7 @@ document.getElementById('btnCriarConta')
             campoConfirmarSenha.classList.add("is-invalid");
 
             //valida as senhas sao iguais
-        } else if (campoSenha.value = campoConfirmarSenha.value) {
+        } else if (campoSenha.value != campoConfirmarSenha.value) {
 
             erro.classList.remove("d-none");
             campoSenha.focus();
