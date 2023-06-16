@@ -15,7 +15,7 @@ fetch(baseUrl + '/listar-coletas', options)
             dados[i] = [response.dados[i].material.nm_material, response.dados[i].usuario.endereco.nm_logradouro, response.dados[i].usuario.endereco.numero, response.dados[i].usuario.endereco.nm_bairro,
             response.dados[i].usuario.endereco.cidade.nm_cidade, response.dados[i].usuario.endereco.cidade.estado.nm_estado,
             response.dados[i].usuario.endereco.nm_complemento, response.dados[i].data.split('-').reverse().join('/'), response.dados[i].horario,
-            response.dados[i].usuario.nm_usuario, response.dados[i].observacao]
+            response.dados[i].usuario.nm_usuario, response.dados[i].observacao, response.dados[i].cd_coleta]
 
         }
 
@@ -29,7 +29,7 @@ fetch(baseUrl + '/listar-coletas', options)
         let thead = criarTag("thead");
         let tbody = criarTag("tbody");
 
-        let indicesTabela = ["Material", "Rua", "Numero", "Bairro", "Cidade", "Estado", "Complemento", "Data", "Horario", "Solicitante", "Observação"];
+        let indicesTabela = ["Material", "Rua", "Numero", "Bairro", "Cidade", "Estado", "Complemento", "Data", "Horario", "Solicitante", "Observação", "Ação"];
         let linhaHead = criarTag("tr");
 
         // Função para criar uma celula Ex <th> + o texto
@@ -54,11 +54,23 @@ fetch(baseUrl + '/listar-coletas', options)
                 linhaBody.setAttribute("class", "table-active");
             }
 
-            for (let i = 0, cel = ''; i < dados[j].length; i++) {
+            for (let i = 0, cel = ''; i < dados[j].length - 1; i++) {
                 cel = criarCelula("td", dados[j][i]);
                 linhaBody.appendChild(cel);
             }
+
+            // Criando o botão Editar
+            let btnFinalizar = document.createElement('button');
+            btnFinalizar.type = 'button';
+            btnFinalizar.innerHTML = 'Finalizar';
+            btnFinalizar.className = 'btn btn-secondary i';
+            btnFinalizar.setAttribute('onclick', "finalizarColeta(" + "'" + dados[j][11] + "'" + ")");
+
+            //Criando mais uma celula no final da linha e adicionando o botão Editar
+            let finalizar = linhaBody.insertCell();
+            finalizar.appendChild(btnFinalizar);
             tbody.appendChild(linhaBody);
+
         }
 
         // Atribuindo as tags da tabela na tag <table>
@@ -93,7 +105,7 @@ document.getElementById("ipt-pesquisa").addEventListener("keyup", function () {
         // Se encontrar, adicionar a classe "table-row" para exibir as linhas da pesquisa
         if (achou) {
             tr.style.display = "table-row";
-        } 
+        }
         // Se não encontrar, adicionar a classe "none" para esconder as linhas
         else {
             tr.style.display = "none";
@@ -101,3 +113,34 @@ document.getElementById("ipt-pesquisa").addEventListener("keyup", function () {
     }
 
 });
+
+function finalizarColeta(idColeta) {
+
+    const options = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            cd_coleta: idColeta,
+            // cd_usuario: storageIdUsuario
+        })
+    };
+
+    fetch(baseUrl + '/excluir-coleta', options)
+        .then(response => response.json())
+        .then(async response => {
+
+            //Caso retorne true os dados foram salvos com sucesso
+            if (response.success == true) {
+
+                await Swal.fire('Coleta Finalizada com sucesso!', '', 'success');
+                location.reload();
+
+                //Caso retorne false os dados nao foram salvos   
+            } else {
+                await Swal.fire('Não foi possível Finalizar a coleta!', '', 'error');
+                location.reload();
+            }
+
+        })
+        .catch(err => console.error(err));
+}

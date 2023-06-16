@@ -61,7 +61,7 @@ document.getElementById('documento_principal')
                     Swal.fire('Data de nascimento divergente!', 'Favor informar a data de nascimento correta', 'error');
 
                     document.getElementById('nascimento').value = '';
-                    document.getElementById('documento_principal').value = '';
+                    // document.getElementById('documento_principal').value = '';
 
                 } else if (!response.success) {
 
@@ -80,7 +80,7 @@ document.getElementById('documento_principal')
 
                     await Swal.fire('CPF inexistente!', 'Favor informar um CPF válido', 'error');
 
-                    document.getElementById('nascimento').value = '';
+                    // document.getElementById('nascimento').value = '';
                     document.getElementById('documento_principal').value = '';
 
                 } else {

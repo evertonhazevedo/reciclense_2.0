@@ -58,7 +58,7 @@
           </li>
         </ul>
         <div id="btnDinamico" class="d-flex justify-content-center" data-bs-toggle="modal"
-          data-bs-target="#formCadastrarColetor" hidden></div>
+          data-bs-target="#formCadastrarColetor" onclick="limparModais()" hidden></div>
 
         <!-- Perfil -->
         <div class="dropdown" id="perfil">
@@ -96,7 +96,7 @@
 
           <div class="col-md-12 d-flex justify-content-end">
             <button type="button" class="btn btn-primary btn-relatorio" data-bs-toggle="modal"
-              data-bs-target="#formGerarRelatorio" id="btn-relatorio">Gerar Relatório</button>
+              data-bs-target="#formGerarRelatorio" id="btn-relatorio" onclick="limparModais()">Gerar Relatório</button>
             <a role="button" class="btn btn-primary btn-buscar" id="btn-buscar"
               href="/src/pages/gerenciaColetor.html">Buscar
               Coletor</a>
@@ -232,7 +232,7 @@
                       <div class="form-group">
                         <label for="exampleInputNascimentoColetor" class="headerInput">Material</label>
                         <select class="form-control" id="selectMaterialRelatorio">
-                          <option>Todos os materiais</option>
+                          <option selected>Todos os materiais</option>
                           <option>Plástico</option>
                           <option>Vidro</option>
                           <option>Metal</option>
@@ -310,15 +310,16 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!--Import Scripts-->
-<script  src="../assets/js/btnDinamico.js"></script>
-<script  src="../assets/js/mascaras.js"></script>
-<script  src="../assets/js/listarColetas.js"></script>
-<script  src="../assets/js/cadastrarColetor.js"></script>
-<script  src="../assets/js/validarDadosPerfil.js"></script>
-<script  src="../assets/js/consultarCPF.js"></script>
-<script  src="../assets/js/recuperarEstados.js"></script>
-<script  src="../assets/js/recuperarCidades.js"></script>
-<script  src="../assets/js/recuperarBairros.js"></script>
-<script  src="../assets/js/gerarRelatorio.js"></script>
+<script src="../assets/js/btnDinamico.js"></script>
+<script src="../assets/js/mascaras.js"></script>
+<script src="../assets/js/listarColetas.js"></script>
+<script src="../assets/js/cadastrarColetor.js"></script>
+<script src="../assets/js/validarDadosPerfil.js"></script>
+<script src="../assets/js/consultarCPF.js"></script>
+<script src="../assets/js/recuperarEstados.js"></script>
+<script src="../assets/js/recuperarCidades.js"></script>
+<script src="../assets/js/recuperarBairros.js"></script>
+<script src="../assets/js/gerarRelatorio.js"></script>
+<script src="../assets/js/limparModais.js"></script>
 
 </html>

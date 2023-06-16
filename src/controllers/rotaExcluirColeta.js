@@ -9,8 +9,8 @@ async function excluirColeta(req, res) {
     await tabelaColeta.findOne({
 
         where: {
-            cd_coleta: dados.cd_coleta,
-            cd_usuario: dados.cd_usuario
+            cd_coleta: dados.cd_coleta
+            // cd_usuario: dados.cd_usuario
         }
     }).then(async function (coleta) {
 

@@ -54,7 +54,7 @@
             <a class="nav-link" href="/src/pages/contato.html">Contato</a>
           </li>
         </ul>
-        <div id="btnDinamico" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#formLogin">
+        <div id="btnDinamico" class="d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#formLogin" onclick="limparModais()">
         </div>
       </div>
     </nav>
@@ -153,8 +153,7 @@
                   <h5>
                     <lable class="numero">1.</lable> Solicite uma coleta
                   </h5>
-                  <p>Você solicita uma coleta informando
-                    a frequencia e o material deixado</p>
+                  <p>Você solicita uma coleta informando o tipo de material deixado</p>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
                   <img src="src/assets/icons/como-funciona-1.png" alt="solicitando a coleta">
@@ -284,7 +283,7 @@
                   <input type="password" name="senha" class="form-control" id="exampleInputPassword1"
                     placeholder="Informe sua senha" required>
                   <button class="btnRecuperarSenha" data-bs-toggle="modal"
-                    data-bs-target="#formRecuperarSenha">Recuperar senha</button>
+                    data-bs-target="#formRecuperarSenha" onclick="limparModais()">Recuperar senha</button>
                 </div>
                 <div>
                   <button type="button" id="btnEntrar"
@@ -298,7 +297,7 @@
                     </div>
                   </div>
                   <p class="btnTxt text-center">Ainda não possui cadastro?<button class="btnCadastrar"
-                      data-bs-toggle="modal" data-bs-target="#formCadastro">Cadastre-se</button></p>
+                      data-bs-toggle="modal" data-bs-target="#formCadastro" onclick="limparModais()">Cadastre-se</button></p>
 
                 </div>
               </form>
@@ -359,7 +358,7 @@
                   <button type="button" id="btnCriarConta" class=" btnCriarConta  form-control btn btn-primary">Criar
                     Conta</button><br>
                   <p class="btnTxt text-center">Já possui cadastro?<button class="btnFazerLogin" data-bs-toggle="modal"
-                      data-bs-target="#formLogin">Fazer Login</button></p>
+                      data-bs-target="#formLogin" onclick="limparModais()">Fazer Login</button></p>
                 </div>
                 <div class="campo-erro alert alert-danger d-none">
                   <span id="campo-erro"></span>!
@@ -404,7 +403,7 @@
                   <button type="button" id="btnRecuperarSenha"
                     class=" btnCriarConta  form-control btn btn-primary">Enviar email</button><br>
                   <p class="btnTxt text-center">Já possui cadastro?<button class="btnFazerLogin" data-bs-toggle="modal"
-                      data-bs-target="#formLogin">Fazer Login</button></p>
+                      data-bs-target="#formLogin" onclick="limparModais()">Fazer Login</button></p>
                 </div>
                 <div class="campo-erro alert alert-danger d-none">
                   Preencha o campo <span id="campo-erro"></span>!
@@ -458,6 +457,7 @@
 <script src="src/assets/js/loginGoogle.js"></script>
 <script src="src/assets/js/validarForcaSenha.js"></script>
 <script src="src/assets/js/recuperarSenha.js"></script>
+<script src="src/assets/js/limparModais.js"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
 

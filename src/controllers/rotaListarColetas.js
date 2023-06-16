@@ -10,7 +10,7 @@ const tabelaMaterial = require('../migrations/material');
 async function listarColetas(req, res) {
 
     await tabelaColeta.findAll({
-        attributes: ['data', 'horario', 'observacao'],
+        attributes: ['cd_coleta', 'data', 'horario', 'observacao'],
         include: [
 
             {
