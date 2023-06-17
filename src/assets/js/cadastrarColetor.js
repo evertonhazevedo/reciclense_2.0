@@ -20,7 +20,7 @@ document.getElementById('btnCadastrarColetor')
         if (nome.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "nome" // nome do campo que não foi preenchido!
+            campo.innerHTML = "Nome" // nome do campo que não foi preenchido!
             nome.focus();
             nome.classList.add("is-invalid");
 
@@ -28,7 +28,7 @@ document.getElementById('btnCadastrarColetor')
         } else if (sobrenome.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "sobrenome"
+            campo.innerHTML = "Sobrenome"
             sobrenome.focus();
             sobrenome.classList.add("is-invalid");
 
@@ -36,14 +36,14 @@ document.getElementById('btnCadastrarColetor')
         } else if (cpf.value == "") {
 
             erro.classList.remove("d-none");
-            campo.innerHTML = "cpf"
+            campo.innerHTML = "CPF"
             cpf.focus();
             cpf.classList.add("is-invalid");
        
         } else if(dt_nascimento.value == ""){
             
             erro.classList.remove("d-none");
-            campo.innerHTML = "dt_nascimento"
+            campo.innerHTML = "Data de Nascimento"
             dt_nascimento.focus();
             dt_nascimento.classList.add("is-invalid");
 
