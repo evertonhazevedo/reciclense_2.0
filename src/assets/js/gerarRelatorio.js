@@ -45,19 +45,13 @@ document.getElementById('btnGerarRelatorio')
                     }).then(async (result) => {
 
                         if (result.isConfirmed) {
-                            console.log('NOME PDF SPLITADO: ' + response.pdf.filename.split('/'))
-                            let pdf = response.pdf.filename.split('/');
 
-                            for (let i = 0; i < pdf.length; i++) {
-                                const element = pdf[i];
-                                console.log('NOME PDF NA VAR PDF. POSICAO ' + i + ' : ' + pdf[i])
-                                
-                            }
+                            let pdf = response.pdf.filename.split('/');
 
                             let iframe = document.createElement('iframe');
 
                             iframe.setAttribute('src', baseUrl + '/baixar-relatorio/' + pdf[4]);
-                            console.log('NOME PDF NO IFRAME: ' + pdf[4])
+
                             document.getElementById('baixarRelatorio').appendChild(iframe).setAttribute('style', 'display: none');
                         }
 
