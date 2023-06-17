@@ -13,6 +13,8 @@ function limparModais() {
     document.getElementById('cadSenha').value = '';
     document.getElementById('cadSenhaConfirmacao').value = '';
 
+    forcaSenha = 0;
+
     //  Modal Recuperar Senha
     document.getElementById('recuperarSenhaEmail').value = '';
 

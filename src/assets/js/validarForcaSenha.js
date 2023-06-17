@@ -2,7 +2,7 @@ document.getElementById('cadSenha')
   .addEventListener('keyup', function () {
 
     let inputSenha = document.getElementById('cadSenha').value;
-    let forcaSenha = 0;
+    var forcaSenha = 0;
 
     if ((inputSenha.length >= 4) && (inputSenha.length <= 7)) {
 
