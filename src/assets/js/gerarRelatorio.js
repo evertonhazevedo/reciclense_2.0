@@ -50,8 +50,8 @@ document.getElementById('btnGerarRelatorio')
                             console.log('NOME PDF NA VAR PDF: ' + pdf)
                             let iframe = document.createElement('iframe');
 
-                            iframe.setAttribute('src', baseUrl + '/baixar-relatorio/' + pdf[5]);
-                            console.log('NOME PDF NO IFRAME: ' + pdf[5])
+                            iframe.setAttribute('src', baseUrl + '/baixar-relatorio/' + pdf[4]);
+                            console.log('NOME PDF NO IFRAME: ' + pdf[4])
                             document.getElementById('baixarRelatorio').appendChild(iframe).setAttribute('style', 'display: none');
                         }
 
