@@ -35,10 +35,10 @@ function limparModais() {
     //  Modal Gerar Relatorio
      document.getElementById('dataInicioRelatorio').value = '';
      document.getElementById('dataFimRelatorio').value = '';
-    //  document.getElementById('nm_estado').value = '';
-    //  document.getElementById('nm_cidade').value = '';
-    //  document.getElementById('selectBairroRelatorio').value = '';
-    //  document.getElementById('selectMaterialRelatorio').value = '';
+     document.getElementById('nm_estado').value = 'Todos os estados';
+     document.getElementById('nm_cidade').value = 'Todas as cidades';
+     document.getElementById('selectBairroRelatorio').value = 'Todos os bairros';
+     document.getElementById('selectMaterialRelatorio').value = 'Todos os materiais';
 
   }
 
